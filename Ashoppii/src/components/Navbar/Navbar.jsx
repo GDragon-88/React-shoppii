@@ -2,7 +2,6 @@ import "./nav.css"
 import { useEffect,useState } from "react";
 
 export function Navbar() {
-
     let cookie = document.cookie.substring(7)
     const [valueUser,setValueUser]=useState()
     useEffect(() => {
@@ -23,7 +22,7 @@ export function Navbar() {
                     <a href="">Trở Thành Ngưới Bán Shopii</a>
                     <a href="">Tải Ứng Dụng</a>
                     <a href="">Kết Nối <i className="fa-brands fa-facebook"></i>
-                        <i className="fa-brands fa-instagram"></i></a>
+                    <i className="fa-brands fa-instagram"></i></a>
                 </div>
                 <div className="nav-bar-notice">
                     <div><i className="fa-regular fa-bell"></i>Thông báo</div>
