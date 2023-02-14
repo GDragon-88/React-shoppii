@@ -1,0 +1,27 @@
+.slide-fashion-male{
+    position: absolute;
+    width: 80%;
+    left: 10%;
+    height: 300px;
+    top: 100px;
+    background-color: aqua;
+}
+.carousel-inner{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.carousel-item{  
+    width: 100%;
+    height: 100%;
+    position: relative;
+   
+    top: 0;
+    left: 0;
+}
+.carousel-item img{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    object-fit: cover;
+}
