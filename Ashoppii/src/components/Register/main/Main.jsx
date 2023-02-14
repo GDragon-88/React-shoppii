@@ -37,7 +37,6 @@ export function Main(props) {
        }}
        onSubmit={(values, { setSubmitting }) => {
          setTimeout(() => {
-          alert(values)
             fetch("http://localhost:8081/register",{
               method:"POST",
               body:JSON.stringify(values, null, 2),

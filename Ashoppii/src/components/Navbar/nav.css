@@ -131,3 +131,17 @@ ion-icon{
     margin-right: 20px;
    cursor: pointer;
 }
+.avatar{
+    position: relative;
+    width: 25px;
+    height: 25px;
+}
+.avatar img{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border-radius: 50%;
+    object-fit: cover;
+    
+}
+.user{cursor: pointer;}

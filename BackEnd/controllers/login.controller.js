@@ -1,3 +1,7 @@
+
+const jwt = require("jsonwebtoken")
+
+
 const {getAllUser} = require("../module/register.model")
 const bcrypt = require('bcryptjs');
 module.exports.findUser =async(req,res)=>{
@@ -5,9 +9,7 @@ module.exports.findUser =async(req,res)=>{
     const result = data.find((i)=>{if(i.email==req.body.email && bcrypt.compareSync(req.body.password, i.password)){
         return i
     }})
-    console.log(req.body);
-    console.log(result);
-    console.log("hello", req.session);
-    // req.session.isAuth = result.id 
-    res.json("ok")
-} 
+    var token = jwt.sign(result, 'chien2811');
+    req.session.token  = token;
+    res.json({value:req.sessionID})
+}

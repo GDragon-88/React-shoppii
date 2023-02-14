@@ -13,3 +13,9 @@ module.exports.getShopMall =()=>{
     let sql = "SELECT * FROM shoppii_schemas.tbl_shop_mall"
     return db.execute(sql)
 }
+module.exports.getSessionValue = (id)=>{
+    let sql = "SELECT * FROM shoppii_schemas.sessions where session_id = ?"
+    let value =[id]
+    sql = mysql.format(sql,value)
+     return db.execute(sql)
+}

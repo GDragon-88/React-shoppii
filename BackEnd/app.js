@@ -24,15 +24,13 @@ app.use(cookieParser())
 app.use(session({
 	secret: 'chiennguyen',
 	store: sessionStore,
-	resave: true,
-	saveUninitialized: true,
+	resave: false,
+	saveUninitialized: false,
 }));
 
 const homeApi = require("./router/home.routes")
 const register = require("./router/register.routes")
 const login = require("./router/login.routes")
-
-
 
 app.use('/api',homeApi)
 app.use('/register',register)

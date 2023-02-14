@@ -43,7 +43,15 @@ export function Main(props) {
               body:JSON.stringify(values, null, 2),
               headers:{'Content-Type': 'application/json'}
             }).then(res=>res.json())
-            .then(data=>console.log(data))
+            .then(data=>{
+              let token = data.value;
+          const d = new Date();
+            d.setTime(d.getTime() + 90 * 24 * 60 * 60 * 1000);
+            let expires = "expires=" + d.toUTCString();
+            document.cookie = "userId = " + token + ";" + expires + ";path=/";
+            }).then(()=>{
+              navigate("/")
+            })
             .catch((err)=>{
               console.log(err);
             })

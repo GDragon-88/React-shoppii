@@ -1,10 +1,18 @@
 const express = require("express");
 const router = express.Router();
-const {getAllCategory,getAllFlashSale,getAllShopMall} = require("../controllers/home.controller")
+const {getAllCategory,
+    getAllFlashSale,
+    getAllShopMall,setSession} = require("../controllers/home.controller");
+
+
+
+
+const {isAuth} = require("../midlewares/isAuth")
 router.get('/category',getAllCategory);
 router.get("/flashsale",getAllFlashSale)
 router.get("/shopmall",getAllShopMall)
-module.exports = router
+router.post("/" ,isAuth, setSession)
+module.exports = router 
 
 
 

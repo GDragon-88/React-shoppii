@@ -1,3 +1,5 @@
+const jwt = require("jsonwebtoken")
+
 
 const {getCategory,getFlashSale,getShopMall} = require('../module/home.model')
 module.exports.getAllCategory=async(req,res)=>{
@@ -14,5 +16,11 @@ module.exports.getAllFlashSale =async(req,res)=>{
 
 module.exports.getAllShopMall =async(req,res)=>{
     const [data] = await getShopMall()
+    res.json(data)
+}
+module.exports.setSession=(req,res)=>{
+    let token = req.token
+    let data = jwt.verify(token,'chien2811')
+    data.password = '';
     res.json(data)
 }
