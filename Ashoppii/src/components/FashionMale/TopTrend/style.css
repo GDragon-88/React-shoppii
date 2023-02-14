@@ -1,0 +1,53 @@
+.trend {
+    width: 80%;
+    height: 300px;
+    position: relative;
+    /* background-color: pink; */
+    top: 520px;
+    left: 10%;
+}
+
+.trend-text {
+    width: 100%;
+    height: 30px;
+}
+
+p {
+    /* font-family: Helvetica Neue, Helvetica, Arial, 文泉驛正黑, WenQuanYi Zen Hei, Hiragino Sans GB, 儷黑 Pro, LiHei Pro, Heiti TC, 微軟正黑體, Microsoft JhengHei UI, Microsoft JhengHei, sans-serif; */
+    color: rgb(117, 117, 117);
+}
+
+.trend-top {
+    width: 100%;
+    height: 270px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-rows: 220px;
+    position: relative;
+    gap: 15px;
+
+}
+.trend-item {
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+.trend-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.trend-item-text{
+    width: 200px;
+    height: 30px;
+    margin-left: 10px;
+    color: black;
+}
+.trend-item-price{
+    width: 100px;
+    height: 20px;
+    margin-left: 60px;
+    color: rgb(238,97,140);
+}

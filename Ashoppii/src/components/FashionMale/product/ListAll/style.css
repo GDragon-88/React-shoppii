@@ -1,0 +1,34 @@
+.listall-product{
+    position: absolute;
+    width: 20%;
+    height: 100%;
+    background-color: #fff;
+}
+.all{
+    width: 100%;
+    height: 50px;
+    background-color: #fff;
+}
+
+.fashion{
+    position: relative;
+    width: 100%;
+    height: 200px;
+    background-color: #fff;
+    font-size: 14px;
+    display: flex;
+    background-color: bisque;
+    flex-direction: column;
+}
+.fashion span{
+    width: max-content;
+    height: 30px;
+    position: relative;
+    left: 20px;
+    cursor: pointer;
+}
+.listall-filter{
+    width: 100%;
+    height: 50px;
+    background-color: #f7c0c0;
+}
