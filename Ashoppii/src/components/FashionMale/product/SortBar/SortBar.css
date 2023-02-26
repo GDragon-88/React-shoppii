@@ -1,0 +1,77 @@
+.sort-bar {
+    position: relative;
+    width: 895px;
+    height: 60px;
+    background-color: rgb(237,237,237);
+    left: 230px;        
+}
+
+.sort-bar-all {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    /* margin-right: 70%; */
+    flex-wrap: nowrap;
+    margin-right: auto;
+    top: 25%;
+
+}
+
+.sort-bar-one {
+    /* background-color: aqua; */
+    width: 100px;
+    height: 35px;
+    text-align: center;
+    margin: auto;
+    /* font-size: 15px; */
+}
+.sort-bar-two {
+    background-color: rgb(238,77,45);
+    color: aliceblue;
+    width: 100px;
+    height: 35px;
+    text-align: center;
+    margin: auto;
+}
+
+.sort-bar-three {
+    background-color: #fff;
+    width: 100px;
+    height: 35px;
+    text-align: center;
+    margin: auto;
+    
+}
+
+.sort-bar-for {
+    background-color: #fff;
+    width: 100px;
+    height: 35px;
+    text-align: center;
+    margin: auto;
+}
+
+.sort-bar-five {
+    background-color: #fff;
+    width: 150px;
+    height: 35px;
+    text-align: center;
+    margin: auto;
+}
+
+.sort-bar-five span {
+    margin-right: 110px;
+    
+}
+
+.sort-bar-five i {
+    margin-bottom: 90px;
+    margin-left: 120px;
+}
+
+.sort-bar-six {
+    background-color: #fff;
+    width: 100px;
+    height: 35px;
+    text-align: center;
+}
