@@ -31,10 +31,15 @@ app.use(session({
 const homeApi = require("./router/home.routes")
 const register = require("./router/register.routes")
 const login = require("./router/login.routes")
+const cart = require("./router/cart.routes")
+const search = require("./router/search.routes")
 
 app.use('/api',homeApi)
 app.use('/register',register)
 app.use("/login",login)
+app.use("/cart",cart)
+app.use("/search",search)
+
 http.listen(port,()=>{
     console.log('server is running');
 })

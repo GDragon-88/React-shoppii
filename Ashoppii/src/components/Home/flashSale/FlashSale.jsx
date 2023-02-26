@@ -15,7 +15,7 @@ export function FlashSale() {
         dispatch(fetchFlashSale())
     })
     const data = useSelector(state=>state.flashsale.value);
-    const time = new Date("feb 15,2023 00:00:00").getTime()
+    const time = new Date("feb 28,2023 00:00:00").getTime()
     setInterval(()=>{
         const now = new Date().getTime()
         let D = time - now;
@@ -42,7 +42,6 @@ export function FlashSale() {
 
             <div className="item-list">
                 {data.map((i)=>(<div className="item-list-content" key={i.id}>
-                    
                     <div className="item-list-img">
                     <img src={i.url}alt=""/>
                     </div>

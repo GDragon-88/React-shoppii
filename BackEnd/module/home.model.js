@@ -19,3 +19,13 @@ module.exports.getSessionValue = (id)=>{
     sql = mysql.format(sql,value)
      return db.execute(sql)
 }
+module.exports.getProduct =()=>{
+    return db.execute("SELECT * FROM shoppii_schemas.tbl_product;")
+}
+
+module.exports.getOneProduct = (name)=>{
+    return db.execute(`SELECT * FROM shoppii_schemas.tbl_product where name = "${name}"` )
+}
+module.exports.getImage = (id)=>{
+    return db.execute(`SELECT * FROM shoppii_schemas.tbl_link_product where product_id = ${id}`)
+}

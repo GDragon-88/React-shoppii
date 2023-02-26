@@ -68,3 +68,7 @@
     top: 5px;
     right: 10px;
 }
+.product-item a{
+    text-decoration: none;
+    color: black;
+}

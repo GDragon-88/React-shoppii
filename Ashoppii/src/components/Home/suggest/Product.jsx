@@ -1,24 +1,36 @@
 import "./product.css"
+import { fetchProcduct } from "./product"
+import { useState, useEffect } from "react"
+import { useDispatch, useSelector } from "react-redux"
+export function Product() {
 
-export function Product(){
-    return(<>
-    <div className="product">
-        <div className="product-item">
-            <div className="product-item-img">
-                <img src="https://cf.shopee.vn/file/sg-11134201-23010-o1uxoa0v6ylvd1_tn" alt=""/>
+    const dispatch = useDispatch()
+    useEffect(() => {
+        dispatch(fetchProcduct())
+
+    }, [])
+
+    const data = useSelector(state => state.product.value)
+    return (<>
+        <div className="product">
+           {data.map(i=>( <div className="product-item" key={i.id} >
+                <a href={`/detail/${i.name}`}>
+                <div className="product-item-img">
+                    <img src={i.link} alt="" />
+                </div>
+                <div className="product-item-description">
+                    <span> {i.name}
+                    </span>
+                </div>
+                <div className="product-item-price">
+                    <p>₫</p> <span>{i.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</span>
+                    <small>đã bán 2k</small>
+                </div>
+                </a>
             </div>
-            <div className="product-item-description">
-                <span> Lót chuột cỡ lớn lỗi nhẹ, in lỗi chuyên game siêu bền đẹp cam kết không ảnh hưởng tới quá trình sử dụng mẫu ngẫu nhiên
-</span>
-            </div>
-            <div className="product-item-price">
-               <p>₫</p> <span>23.000</span>
-                <small>đã bán 2k</small>
-            </div>
+))}
+
         </div>
-        
 
-    </div>
-    
     </>)
 }

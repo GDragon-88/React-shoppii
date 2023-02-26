@@ -81,12 +81,13 @@
 }
 .item-list .price{
     position: absolute;
-    width: 100%;
+    width: max-content;
     height: 20px;
-    bottom: 29px;
-    text-align: center;
+    top: 120px;
     line-height: 20px;
-    font-size: 17px;
+    font-size: 15px;
+    left: 50%;
+    transform: translate(-50%);
     font-weight: 500;
     color: #f94e2f;
 }

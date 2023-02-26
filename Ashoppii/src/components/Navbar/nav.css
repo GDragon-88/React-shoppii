@@ -82,6 +82,7 @@ i{
     font-size: 15px;
     font-weight: 300;
     padding-left: 10px;
+    color: black !important;
 }
 .input button{
     width: 50px;
@@ -114,11 +115,11 @@ ion-icon{
     color: #fff;
     cursor: pointer;
 }
-.item{
+.item-nav-bar{
     width: 60%;
     height: 1.2em;
     position: relative;
-    top: 22px;
+    top: 52px;
     display: flex;
     font-size: 11px;
     left: 19%;
@@ -126,7 +127,7 @@ ion-icon{
     color: #fff;
     font-weight: 200;
 } 
-.item div{
+.item-nav-bar div{
     width: max-content;
     margin-right: 20px;
    cursor: pointer;
@@ -145,3 +146,8 @@ ion-icon{
     
 }
 .user{cursor: pointer;}
+.log-out{
+    position: absolute;
+   right: -19%;
+   cursor: pointer;
+}

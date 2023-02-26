@@ -5,7 +5,6 @@ export const fetchFlashSale =createAsyncThunk('fetch/flashsale',async()=>{
     return result
 })
 
-
 const flashsaleSlice = createSlice({
     name:"flashsale",
     initialState:{status:'idle',value:[]},

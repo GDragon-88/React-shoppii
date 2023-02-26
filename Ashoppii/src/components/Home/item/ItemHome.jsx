@@ -1,4 +1,5 @@
-import "../item/item.css"
+import "../item/item.css";
+
 
 export function ItemHome(){
 

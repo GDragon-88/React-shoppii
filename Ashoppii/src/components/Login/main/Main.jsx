@@ -3,13 +3,19 @@ import {Link}  from "react-router-dom"
 import { useNavigate } from "react-router-dom";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { Footer } from "../../Footer/Footer";
+
+
 export function Main(props) {
     const data=props.value   
     const path = props.path;
     const text = props.text
     const value = props.page;
-    
     const navigate= useNavigate();
+    let valueUrl = window.location.href.substring(33)
+    
+    
+    
+    
     return (<>
         <div className="main">
             <div className="main-img">
@@ -50,7 +56,11 @@ export function Main(props) {
             let expires = "expires=" + d.toUTCString();
             document.cookie = "userId = " + token + ";" + expires + ";path=/";
             }).then(()=>{
-              navigate("/")
+              if(valueUrl){
+                navigate(`/detail/${valueUrl}`)
+              }else{
+                  navigate("/")
+              }
             })
             .catch((err)=>{
               console.log(err);

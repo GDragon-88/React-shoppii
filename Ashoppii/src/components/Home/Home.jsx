@@ -5,7 +5,7 @@ import { Category } from "./category/Category";
 import { FlashSale } from "./flashSale/FlashSale.jsx";
 import { Banner } from "./banner/Banner";
 import { ShopMall } from "./shoppeMall/ShopMall.jsx";
-import { Product } from "./suggest/Product";
+import { Product } from "./suggest/Product.jsx";
 import { Navbar } from "../Navbar/Navbar";
 export function Home(){
     return(<>
